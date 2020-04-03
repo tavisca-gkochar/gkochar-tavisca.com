@@ -1,0 +1,12 @@
+<h3 class="title">Users</h3>
+<button (click)="openAddDialog()" mat-mini-fab color="primary">+</button>
+
+<div class="container">
+
+  <ng-template ngFor let-user [ngForOf]="users" let-i="index">
+    <app-user-card [style]="{'cursor': 'pointer'}" (click)="viewUser(i)" [user]="user"></app-user-card>
+  </ng-template>
+</div>
+<div>
+  <router-outlet></router-outlet>
+</div>

@@ -1,0 +1,35 @@
+$background : #100e17;
+$text-color: #fffeee;
+$card-bg: #2a282e;
+$large-size: 20px;
+$medium-size: 10px;
+$small-size: 5px;
+
+:host {
+
+  .mat-mini-fab {
+    position: absolute;
+    right: 10px;
+    top: 26px;
+  }
+
+  font-family: 'Open Sans',
+  sans-serif;
+  margin: $large-size;
+  padding: $medium-size;
+
+  .title {
+    font-weight: 700;
+    text-align: center;
+  }
+
+  .container {
+    color: $text-color;
+    display: flex;
+    flex-wrap: wrap;
+    padding: max($small-size, $medium-size);
+    padding-bottom: 100px;
+    justify-content: center;
+  }
+
+}

@@ -1,0 +1,35 @@
+:host {
+  padding: 20px;
+
+  #counter-app {
+    display: flex;
+
+    .card {
+      flex: 1 0 300px;
+      box-sizing: border-box;
+      margin: 1rem .25em;
+      background: white;
+      padding: 10px;
+      box-shadow: 2px 4px 8px #b1b1b1;
+      transition: 0.5s;
+      border-radius: .3em;
+      max-width: 500px;
+      min-height: 200px;
+    }
+
+    .card-header {
+      margin: -5px;
+      padding: 20px 10px;
+      border-radius: 3px 3px 0px 0px;
+      background: linear-gradient(to right, rgb(255, 239, 186), rgb(255, 255, 255));
+    }
+
+    .card-body {
+      margin: 10px;
+      padding: 10px;
+      display: flex;
+      justify-content: space-evenly;
+    }
+  }
+
+}

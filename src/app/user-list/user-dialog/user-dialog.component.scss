@@ -1,0 +1,15 @@
+:host {
+  .mat-dialog-container {
+      margin: 20px;
+      padding: 20px;
+  }
+
+  .mat-dialog-content {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .mat-dialog-actions {
+    justify-content: space-around;
+  }
+}

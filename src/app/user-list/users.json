@@ -1,0 +1,17 @@
+[
+    {
+        "name": "User A",
+        "designation": "Soft Dev",
+        "skills": ["JS", "React", "Angular", "C#"]
+    },
+    {
+        "name": "User B",
+        "designation": "Project M",
+        "skills": ["C#", "Agile", "Angular"]
+    },
+    {
+        "name": "Gautam",
+        "designation": "QA Engineer",
+        "skills": ["C#", "React", "Angular"]
+    }
+]

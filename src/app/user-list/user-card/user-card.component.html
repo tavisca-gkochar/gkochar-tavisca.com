@@ -1,0 +1,21 @@
+<div class="card">
+    <h3 class="title">{{user?.name}}</h3>
+    <div class="circle">
+        <img class="avatar__projectmanager" [src]="imagesPath+'avatar.png'">
+    </div>
+    <div class="card-details">
+        <div class="filledbar"></div>
+        <h3 class="title">{{user?.designation}}</h3>
+        <div class="skills">
+            <p>Skills</p>
+            <ul>
+                <li *ngFor="let skill of user?.skills">{{skill}}</li>
+            </ul>
+        </div>
+        <div class="action-bar">
+            <img [src]="imagesPath+'fb.png'">
+            <img [src]="imagesPath+'tw.png'">
+            <img [src]="imagesPath+'end.jpg'">
+        </div>
+    </div>
+</div>
