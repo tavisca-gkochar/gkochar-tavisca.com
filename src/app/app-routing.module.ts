@@ -10,6 +10,8 @@ import { AboutComponent } from './about/about.component';
 import { DirectivesComponent } from './directives/directives.component';
 import { StylingComponent } from './styling/styling.component';
 import { UserListComponent } from './user-list/user-list.component';
+import { LoadCustomElementComponent } from './custom-element/load-custom-element.component';
+import { LoadIframeComponent } from './load-iframe/load-iframe.component';
 
 const routes: Routes = [
   {
@@ -22,7 +24,7 @@ const routes: Routes = [
       { path: 'about', component: AboutComponent },
       { path: 'user-profile', component: UserProfileComponent },
       {
-        path: 'users', component: UserListComponent, 
+        path: 'users', component: UserListComponent,
         children: [
           { path: ':id', component: UserProfileComponent },
         ]
@@ -35,10 +37,16 @@ const routes: Routes = [
       {
         path: 'demo', component: DemoComponent
       },
+      {
+        path: 'custom-element', component: LoadCustomElementComponent
+      },
+      {
+        path: 'iframe', component: LoadIframeComponent
+      },
       { path: '**', redirectTo: '/not-found' }
     ]
 
-  },
+  }
 
 ];
 
@@ -47,5 +55,4 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class AppRoutingModule {
-
 }

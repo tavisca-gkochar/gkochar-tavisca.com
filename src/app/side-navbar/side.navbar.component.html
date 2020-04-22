@@ -1,6 +1,6 @@
 <div class="example-container" [class.example-is-mobile]="mobileQuery.matches">
   <mat-toolbar #toolbar color="primary" class="example-toolbar">
-    <button mat-icon-button (click)="snav.toggle()">
+    <button mat-icon-button (click)="tooglSideNav()">
       <mat-icon>menu</mat-icon>
     </button>
     <h1 class="example-app-name">Sample App</h1>
@@ -39,6 +39,11 @@
         <a mat-list-item routerLink="/about" (click)="snav.toggle()">About</a>
         <a mat-list-item routerLink="/demo" (click)="snav.toggle()">Demo</a>
         <a mat-list-item routerLink="/users" (click)="snav.toggle()">Users</a>
+        <a mat-list-item routerLink="/custom-element" (click)="snav.toggle()">Custom Element</a>
+        <a mat-list-item routerLink="/iframe" (click)="snav.toggle()">Using Iframe</a>
+        <a mat-list-item routerLink="/custom-element" (click)="snav.toggle()">Using SingleSPA</a>
+
+
       </mat-nav-list>
     </mat-sidenav>
 

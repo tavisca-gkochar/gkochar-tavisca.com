@@ -3,6 +3,9 @@ import { UserService } from './user-list.service';
 import { MatDialog, MatDialogConfig } from '@angular/material/dialog';
 import { UserDialogComponent } from './user-dialog/user-dialog.component';
 import { Router } from '@angular/router';
+import { UserListElement } from "./userListLit";
+import { HelloElement } from "./hello-element";
+// console.assert(HelloElement !== undefined);
 
 @Component({
   selector: 'app-user-list',
@@ -15,7 +18,11 @@ export class UserListComponent implements OnInit {
 
   constructor(private _userService: UserService,
     private matDialog: MatDialog,
-    private _router: Router) { }
+    private _router: Router) {
+    customElements.define('user-list', UserListElement);
+
+    // @customElement('hello-world')
+  }
 
   ngOnInit(): void {
     this.getUsers();

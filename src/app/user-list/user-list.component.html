@@ -6,6 +6,8 @@
   <ng-template ngFor let-user [ngForOf]="users" let-i="index">
     <app-user-card [style]="{'cursor': 'pointer'}" (click)="viewUser(i)" [user]="user"></app-user-card>
   </ng-template>
+  <!-- <hello-world name="{{ 'Lit emementjdsnsd ' }}"></hello-world> -->
+  <!-- <user-list [users]="users"></user-list> -->
 </div>
 <div>
   <router-outlet></router-outlet>
