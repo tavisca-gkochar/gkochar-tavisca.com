@@ -1,4 +1,4 @@
-# Simplified Dependency Diagram with Labels
+# Simplified Dependency Diagram with Improved Layout
 
 ```mermaid
 graph TD;
