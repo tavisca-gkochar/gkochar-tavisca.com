@@ -49,6 +49,8 @@ graph TD;
     style A3 fill:#decbe4,stroke:#333,stroke-width:2px;
     style A4 fill:#fed9a6,stroke:#333,stroke-width:2px;
     style A5 fill:#ffffcc,stroke:#333,stroke-width:2px;
+```
+
 ## Diagram 2: SDKs and Apps
 
 ```mermaid
@@ -91,3 +93,29 @@ graph TD;
     style A3 fill:#decbe4,stroke:#333,stroke-width:2px;
     style A4 fill:#fed9a6,stroke:#333,stroke-width:2px;
     style A5 fill:#ffffcc,stroke:#333,stroke-width:2px;
+```
+
+## Diagram 3: SDKs and Sites
+
+```mermaid
+graph TD;
+    %% Define subgraph SDKs
+    subgraph SDKs
+        L4[📦 sdk4]
+    end
+
+    subgraph Sites
+        S1[🐳 Site1]
+        S2[🐳 Site2]
+    end
+
+    %% Define relationships
+    L4 -->|used by| S1;
+    L4 -->|used by| S2;
+
+    %% Adding styles and theming
+    style L4 fill:#0cf,stroke:#333,stroke-width:2px;
+
+    style S1 fill:#b3b3b3,stroke:#333,stroke-width:2px;
+    style S2 fill:#d9d9d9,stroke:#333,stroke-width:2px;
+```
