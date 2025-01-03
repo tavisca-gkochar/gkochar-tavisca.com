@@ -90,27 +90,3 @@ graph TD;
     class L1,L2,L3,L4 sdk;
     class A1,A2,A3,A4,A5 app;
     class S1,S2 site;
-
-
-### Explanation
-
-- **Components:** Connections from components to apps are represented with dashed lines (`-.->`).
-- **SDKs:** Connections from SDKs to apps/sites are represented with cross lines (`--x`).
-- **Styles:** Each type of node (components, SDKs, apps, sites) has a distinct fill color.
-- **Class Definitions:** Different classes are defined for components, SDKs, apps, and sites to maintain consistent styling.
-
-### Instructions
-
-1. **Create a Markdown File:**
-   - Create a new file named `enhanced_dependencies.md` in your repository.
-
-2. **Copy and Paste the Diagram:**
-   - Copy the above Mermaid.js code and paste it into your `enhanced_dependencies.md` file.
-
-3. **Commit and Push to GitHub:**
-   - Commit the Markdown file and push it to your GitHub repository.
-
-4. **View the Diagram:**
-   - Navigate to the file in your GitHub repository. GitHub should render the Mermaid diagram correctly.
-
-By following these steps, you will have a visually appealing and informative dependency diagram with distinct connection colors that you can showcase to your manager.
