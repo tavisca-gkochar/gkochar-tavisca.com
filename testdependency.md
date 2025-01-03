@@ -2,41 +2,59 @@
 
 ```mermaid
 graph TD;
+
     subgraph Components
-        A[ComponentA]
-        D[ComponentB]
+        C1[🔧 Component1]
+        C2[🔧 Component2]
+        C3[🔧 Component3]
+        C4[🔧 Component4]
+        C5[🔧 Component5]
     end
 
     subgraph SDKs
-        F[SDK1]
-        G[SDK2]
+        L1[📦 sdk1]
+        L2[📦 sdk2]
+        L3[📦 sdk3]
+        L4[📦 sdk4]
     end
 
     subgraph Apps
-        B[App1]
-        E[App2]
-        C[App3]
+        A1[📱App1]
+        A2[📱App2]
+        A3[📱App3]
+        A4[📱App4]
+        A5[📱App5]
     end
 
-    A -->|uses| B;
-    A -->|uses| C;
-    D -->|uses| E;
-    F -->|used by| B;
-    G -->|used by| E;
-    G -->|used by| C;
+    subgraph Sites
+        S1[🐳Site1]
+        S2[🐳Site2]
+    end
 
-    %% Adding styles
-    style A fill:#f96,stroke:#333,stroke-width:2px;
-    style G fill:#f96,stroke:#333,stroke-width:2px;
-    style B fill:#b3cde3,stroke:#333,stroke-width:2px;
-    style E fill:#b3cde3,stroke:#333,stroke-width:2px;
-    style C fill:#b3cde3,stroke:#333,stroke-width:2px;
+    %% Relationships
+    C1 -->|uses| A1;
+    C1 -->|uses| A2;
+    C1 -->|uses| A3;
+    C1 -->|uses| A4;
+    C1 -->|uses| A5;
+    C2 -->|uses| A2;
+    C2 -->|uses| A3;
+    C3 -->|uses| A1;
+    C3 -->|uses| A4;
+    C3 -->|uses| A5;
+    C4 -->|uses| A2;
+    C4 -->|uses| A3;
+    C5 -->|uses| A4;
+    C5 -->|uses| A5;
 
-    %% Adding labels and additional styling
-    classDef component fill:#f9f,stroke:#333,stroke-width:2px;
-    classDef sdk fill:#9cf,stroke:#333,stroke-width:2px;
-    classDef app fill:#b3cde3,stroke:#333,stroke-width:2px;
-
-    class A,D component;
-    class F,G sdk;
-    class B,E,C app;
+    L1 -->|used by| A1;
+    L1 -->|used by| A2;
+    L1 -->|used by| A3;
+    L1 -->|used by| A4;
+    L2 -->|used by| A1;
+    L2 -->|used by| A2;
+    L2 -->|used by| A3;
+    L2 -->|used by| A4;
+    L3 -->|used by| A5;
+    L4 -->|used by| S1;
+    L4 -->|used by| S2;
