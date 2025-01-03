@@ -37,57 +37,15 @@ graph TD;
     C5 -->|uses| A4;
     C5 -->|uses| A5;
 
+    %% Adding styles and theming
+    style C1 fill:#f96,stroke:#333,stroke-width:2px;
+    style C2 fill:#f6b,stroke:#333,stroke-width:2px;
+    style C3 fill:#f9c,stroke:#333,stroke-width:2px;
+    style C4 fill:#f39,stroke:#333,stroke-width:2px;
+    style C5 fill:#f63,stroke:#333,stroke-width:2px;
 
-
-
-## Diagram 2: SDKs and Apps
-
-```mermaid
-graph TD;
-    %% Define subgraph SDKs
-    subgraph SDKs
-        L1[📦 sdk1]
-        L2[📦 sdk2]
-        L3[📦 sdk3]
-        L4[📦 sdk4]
-    end
-
-    subgraph Apps
-        A1[📱 App1]
-        A2[📱 App2]
-        A3[📱 App3]
-        A4[📱 App4]
-        A5[📱 App5]
-    end
-
-    %% Define relationships
-    L1 -->|used by| A1;
-    L1 -->|used by| A2;
-    L1 -->|used by| A3;
-    L1 -->|used by| A4;
-    L2 -->|used by| A1;
-    L2 -->|used by| A2;
-    L2 -->|used by| A3;
-    L2 -->|used by| A4;
-    L3 -->|used by| A5;
-
-
-
-
-## Diagram 3: SDKs and Sites
-
-```mermaid
-graph TD;
-    %% Define subgraph SDKs
-    subgraph SDKs
-        L4[📦 sdk4]
-    end
-
-    subgraph Sites
-        S1[🐳 Site1]
-        S2[🐳 Site2]
-    end
-
-    %% Define relationships
-    L4 -->|used by| S1;
-    L4 -->|used by| S2;
+    style A1 fill:#b3cde3,stroke:#333,stroke-width:2px;
+    style A2 fill:#ccebc5,stroke:#333,stroke-width:2px;
+    style A3 fill:#decbe4,stroke:#333,stroke-width:2px;
+    style A4 fill:#fed9a6,stroke:#333,stroke-width:2px;
+    style A5 fill:#ffffcc,stroke:#333,stroke-width:2px;
