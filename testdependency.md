@@ -3,14 +3,6 @@
 ```mermaid
 graph TD;
     %% Define subgraphs for better organization
-    subgraph Components
-        C1[🔧 Component1]
-        C2[🔧 Component2]
-        C3[🔧 Component3]
-        C4[🔧 Component4]
-        C5[🔧 Component5]
-    end
-
     subgraph SDKs
         L1[📦 sdk1]
         L2[📦 sdk2]
@@ -24,6 +16,14 @@ graph TD;
         A3[📱 App3]
         A4[📱 App4]
         A5[📱 App5]
+    end
+
+    subgraph Components
+        C1[🔧 Component1]
+        C2[🔧 Component2]
+        C3[🔧 Component3]
+        C4[🔧 Component4]
+        C5[🔧 Component5]
     end
 
     subgraph Sites
