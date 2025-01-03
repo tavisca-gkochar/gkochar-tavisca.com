@@ -1,8 +1,16 @@
-# Enhanced Dependency Diagram with Theming, Colors, and Distinct Connection Lines
+# Simplified Dependency Diagram
 
 ```mermaid
 graph TD;
     %% Define subgraphs for better organization
+    subgraph Components
+        C1[🔧 Component1]
+        C2[🔧 Component2]
+        C3[🔧 Component3]
+        C4[🔧 Component4]
+        C5[🔧 Component5]
+    end
+
     subgraph SDKs
         L1[📦 sdk1]
         L2[📦 sdk2]
@@ -18,46 +26,38 @@ graph TD;
         A5[📱 App5]
     end
 
-    subgraph Components
-        C1[🔧 Component1]
-        C2[🔧 Component2]
-        C3[🔧 Component3]
-        C4[🔧 Component4]
-        C5[🔧 Component5]
-    end
-
     subgraph Sites
         S1[🐳 Site1]
         S2[🐳 Site2]
     end
 
     %% Define relationships with distinct colors
-    C1 -.->|uses| A1;
-    C1 -.->|uses| A2;
-    C1 -.->|uses| A3;
-    C1 -.->|uses| A4;
-    C1 -.->|uses| A5;
-    C2 -.->|uses| A2;
-    C2 -.->|uses| A3;
-    C3 -.->|uses| A1;
-    C3 -.->|uses| A4;
-    C3 -.->|uses| A5;
-    C4 -.->|uses| A2;
-    C4 -.->|uses| A3;
-    C5 -.->|uses| A4;
-    C5 -.->|uses| A5;
+    C1 -. Component-> A1;
+    C1 -. Component-> A2;
+    C1 -. Component-> A3;
+    C1 -. Component-> A4;
+    C1 -. Component-> A5;
+    C2 -. Component-> A2;
+    C2 -. Component-> A3;
+    C3 -. Component-> A1;
+    C3 -. Component-> A4;
+    C3 -. Component-> A5;
+    C4 -. Component-> A2;
+    C4 -. Component-> A3;
+    C5 -. Component-> A4;
+    C5 -. Component-> A5;
 
-    L1 --x|used by| A1;
-    L1 --x|used by| A2;
-    L1 --x|used by| A3;
-    L1 --x|used by| A4;
-    L2 --x|used by| A1;
-    L2 --x|used by| A2;
-    L2 --x|used by| A3;
-    L2 --x|used by| A4;
-    L3 --x|used by| A5;
-    L4 --x|used by| S1;
-    L4 --x|used by| S2;
+    L1 -- SDK-> A1;
+    L1 -- SDK-> A2;
+    L1 -- SDK-> A3;
+    L1 -- SDK-> A4;
+    L2 -- SDK-> A1;
+    L2 -- SDK-> A2;
+    L2 -- SDK-> A3;
+    L2 -- SDK-> A4;
+    L3 -- SDK-> A5;
+    L4 -- SDK-> S1;
+    L4 -- SDK-> S2;
 
     %% Adding styles and theming
     style C1 fill:#f96,stroke:#333,stroke-width:2px;
@@ -90,3 +90,10 @@ graph TD;
     class L1,L2,L3,L4 sdk;
     class A1,A2,A3,A4,A5 app;
     class S1,S2 site;
+
+    %% Legend
+    subgraph Legend
+        direction LR
+        Component[Component] -.-> App[App]
+        SDK[SDK] --x App[App]
+    end
