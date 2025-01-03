@@ -1,3 +1,40 @@
+# Dependency Diagram Checkout UI Repo
+
+## Components
+- 🔧 C1[Agency Info]
+- 🔧 C2[Desktop Billing Info]
+- 🔧 C3[Checkout Payment Summary Lib]
+- 🔧 C4[Desktop Checkout Payment Summary]
+- 🔧 C5[Mobile Billing Info]
+
+## SDKs
+- 📦 L1[Checkout Common]
+- 📦 L2[Checkout Orxe Lib]
+- 📦 L3[Contracts ]
+
+## Apps
+- 📱 A1[Desktop Checkout Microapp]
+- 📱 A2[Desktop Checkout Microapp v2]
+- 📱 A3[Desktop Express]
+- 📱 A4[Mobile Checkout Microapp]
+- 📱 A5[Mobile Express]
+- 📱 S1[Desktop Checkout Site]
+- 📱 S2[Mobile Checkout Site]
+
+## Relationships
+- 🔧 Agency Info ➡️ 📱 Desktop
+- 🔧 ComponentA ➡️ 📱 App3
+- 🔧 ComponentB ➡️ 📱 App2
+- 📦 SDK1 ➡️ 📱 App1
+- 📦 SDK2 ➡️ 📱 App2
+- 📦 SDK2 ➡️ 📱 App3
+
+## Affected Apps by Changes
+- **🔧 ComponentA**: 📱 App1, 📱 App3
+- **📦 SDK2**: 📱 App2, 📱 App3
+
+
+
 # Dependency Diagrams
 
 ## Diagram 1: Components and Apps
