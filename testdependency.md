@@ -1,4 +1,4 @@
-# Simplified Dependency Diagram
+# Simplified Dependency Diagram with Labels
 
 ```mermaid
 graph TD;
@@ -28,33 +28,33 @@ graph TD;
         C5[🔧 Component5]
     end
 
-    %% Define relationships with distinct colors
-    C1 -.->|uses| A1;
-    C1 -.->|uses| A2;
-    C1 -.->|uses| A3;
-    C1 -.->|uses| A4;
-    C1 -.->|uses| A5;
-    C2 -.->|uses| A2;
-    C2 -.->|uses| A3;
-    C3 -.->|uses| A1;
-    C3 -.->|uses| A4;
-    C3 -.->|uses| A5;
-    C4 -.->|uses| A2;
-    C4 -.->|uses| A3;
-    C5 -.->|uses| A4;
-    C5 -.->|uses| A5;
+    %% Define relationships with distinct colors and labels
+    C1 -.->|uses App1| A1;
+    C1 -.->|uses App2| A2;
+    C1 -.->|uses App3| A3;
+    C1 -.->|uses App4| A4;
+    C1 -.->|uses App5| A5;
+    C2 -.->|uses App2| A2;
+    C2 -.->|uses App3| A3;
+    C3 -.->|uses App1| A1;
+    C3 -.->|uses App4| A4;
+    C3 -.->|uses App5| A5;
+    C4 -.->|uses App2| A2;
+    C4 -.->|uses App3| A3;
+    C5 -.->|uses App4| A4;
+    C5 -.->|uses App5| A5;
 
-    L1 --x|used by| A1;
-    L1 --x|used by| A2;
-    L1 --x|used by| A3;
-    L1 --x|used by| A4;
-    L2 --x|used by| A1;
-    L2 --x|used by| A2;
-    L2 --x|used by| A3;
-    L2 --x|used by| A4;
-    L3 --x|used by| A5;
-    L4 --x|used by| S1;
-    L4 --x|used by| S2;
+    L1 --x|used by App1| A1;
+    L1 --x|used by App2| A2;
+    L1 --x|used by App3| A3;
+    L1 --x|used by App4| A4;
+    L2 --x|used by App1| A1;
+    L2 --x|used by App2| A2;
+    L2 --x|used by App3| A3;
+    L2 --x|used by App4| A4;
+    L3 --x|used by App5| A5;
+    L4 --x|used by Site1| S1;
+    L4 --x|used by Site2| S2;
 
     %% Adding styles and theming
     style C1 fill:#f96,stroke:#333,stroke-width:2px;
