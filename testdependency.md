@@ -6,19 +6,19 @@
 graph TD;
     %% Define subgraph Components
     subgraph Components
-        C1[**🔧 Component1**]
-        C2[**🔧 Component2**]
-        C3[**🔧 Component3**]
-        C4[**🔧 Component4**]
-        C5[**🔧 Component5**]
+        C1[**🔧 Agency Info**]
+        C2[**🔧 Checkout Payment Summary Lib**]
+        C3[**🔧 Desktop Checkout Payment Summary**]
+        C4[**🔧 Mobile Billing Info**]
+        C5[**🔧 Desktop Billing Info**]
     end
 
     subgraph Apps
-        A1[**📱 App1**]
-        A2[**📱 App2**]
-        A3[**📱 App3**]
-        A4[**📱 App4**]
-        A5[**📱 App5**]
+        A1[**📱 Desktop Checkout Microapp**]
+        A2[**📱 Desktop Checkout Microapp**]
+        A3[**📱 Desktop Checkout Microapp**]
+        A4[**📱 Desktop Checkout Microapp**]
+        A5[**📱 Desktop Checkout Microapp**]
     end
 
     %% Define relationships
@@ -57,18 +57,18 @@ graph TD;
 graph TD;
     %% Define subgraph SDKs
     subgraph SDKs
-        L1[**📦 sdk1**]
-        L2[**📦 sdk2**]
-        L3[**📦 sdk3**]
-        L4[**📦 sdk4**]
+        L1[**📦 Checkout Orxe Lib**]
+        L2[**📦 Contracts**]
+        L3[**📦 Checkout Common**]
+        L4[**📦 Shell SDK**]
     end
 
     subgraph Apps
-        A1[**📱 App1**]
-        A2[**📱 App2**]
-        A3[**📱 App3**]
-        A4[**📱 App4**]
-        A5[**📱 App5**]
+        A1[**📱 Desktop Checkout Microapp**]
+        A2[**📱 Mobile Checkout Microapp**]
+        A3[**📱 Mobile Express**]
+        A4[**📱 Desktop Express**]
+        A5[**📱 Desktop Checkout Microapp v2**]
     end
 
     %% Define relationships
