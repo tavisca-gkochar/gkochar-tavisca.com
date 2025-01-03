@@ -1,4 +1,4 @@
-# Dependency Diagram: Components, SDKs, and Apps
+# Simplified Dependency Diagram
 
 ```mermaid
 graph TD;
@@ -10,12 +10,14 @@ graph TD;
         L4[📦 sdk4]
     end
 
-    subgraph Apps
+    subgraph "Apps and Sites"
         A1[📱 App1]
         A2[📱 App2]
         A3[📱 App3]
         A4[📱 App4]
         A5[📱 App5]
+        S1[🐳 Site1]
+        S2[🐳 Site2]
     end
 
     subgraph Components
@@ -51,6 +53,8 @@ graph TD;
     L2 --x|used by| A3;
     L2 --x|used by| A4;
     L3 --x|used by| A5;
+    L4 --x|used by| S1;
+    L4 --x|used by| S2;
 
     %% Adding styles and theming
     style C1 fill:#f96,stroke:#333,stroke-width:2px;
@@ -69,48 +73,23 @@ graph TD;
     style A3 fill:#decbe4,stroke:#333,stroke-width:2px;
     style A4 fill:#fed9a6,stroke:#333,stroke-width:2px;
     style A5 fill:#ffffcc,stroke:#333,stroke-width:2px;
+    style S1 fill:#b3b3b3,stroke:#333,stroke-width:2px;
+    style S2 fill:#d9d9d9,stroke:#333,stroke-width:2px;
 
     %% Adding labels and additional styling
     classDef component fill:#f9f,stroke:#333,stroke-width:2px;
     classDef sdk fill:#9cf,stroke:#333,stroke-width:2px;
     classDef app fill:#b3cde3,stroke:#333,stroke-width:2px;
+    classDef site fill:#b3b3b3,stroke:#333,stroke-width:2px;
 
     class C1,C2,C3,C4,C5 component;
     class L1,L2,L3,L4 sdk;
     class A1,A2,A3,A4,A5 app;
-
-
-
-### Diagram 2: SDKs and Sites
-
-```markdown
-# Dependency Diagram: SDKs and Sites
-
-```mermaid
-graph TD;
-    %% Define subgraphs for better organization
-    subgraph SDKs
-        L4[📦 sdk4]
-    end
-
-    subgraph Sites
-        S1[🐳 Site1]
-        S2[🐳 Site2]
-    end
-
-    %% Define relationships with distinct colors
-    L4 --x|used by| S1;
-    L4 --x|used by| S2;
-
-    %% Adding styles and theming
-    style L4 fill:#0cf,stroke:#333,stroke-width:2px;
-
-    style S1 fill:#b3b3b3,stroke:#333,stroke-width:2px;
-    style S2 fill:#d9d9d9,stroke:#333,stroke-width:2px;
-
-    %% Adding labels and additional styling
-    classDef sdk fill:#9cf,stroke:#333,stroke-width:2px;
-    classDef site fill:#b3b3b3,stroke:#333,stroke-width:2px;
-
-    class L4 sdk;
     class S1,S2 site;
+
+    %% Legend
+    subgraph Legend
+        direction LR
+        Component[Component] -.-> App[App]
+        SDK[SDK] --x App[App] & Site[Site]
+    end
